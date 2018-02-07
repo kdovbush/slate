@@ -144,7 +144,8 @@ static SlateConfig *_instance = nil;
   [self setDefaultLayouts:[[NSMutableArray alloc] init]];
   [self setAliases:[[NSMutableDictionary alloc] init]];
 
-  BOOL loadedDefault = [self loadConfigFileWithPath:@"~/.slate"];
+    // NOTE: Quick fix
+  BOOL loadedDefault = [self loadConfigFileWithPath:@"~/kdovbush.slate"];
   BOOL loadedJS = [self loadConfigFileWithPath:@"~/.slate.js"];
 
   if (!loadedDefault && !loadedJS) {
